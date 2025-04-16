@@ -2,62 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Raaghav Pillai</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <title>Raaghav Pillai | Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
   <script defer src="script.js"></script>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#hero">Home</a></li>
+  <header class="hero">
+    <nav class="navbar">
+      <div class="logo">Raaghav</div>
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#publications">Publications</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+    <div class="hero-content">
+      <h1>Hi, I’m Raaghav.</h1>
+      <p>Creative Technologist | Educator | Builder</p>
+      <a href="#work" class="cta">See My Work</a>
+    </div>
   </header>
 
-  <section id="hero">
-    <h1>Hi, I'm Raaghav 👋</h1>
-    <p>Computer Science + Education @ UIUC</p>
-    <a href="#projects" class="cta-button">View My Work</a>
-  </section>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m a CS + Education student at UIUC interested in AI, accessibility tech, and consulting.</p>
-  </section>
-
-  <section id="experience">
-    <h2>Experience</h2>
-    <ul>
-      <li><strong>Internal Project Manager, OTCR</strong><br>Jan 2025 – Present<br>Leading tech + research teams building websites, GPTs, and whitepapers.</li>
-      <li><strong>Lead Consultant, OTCR</strong><br>Sept 2024 – Present<br>EdTech and AI consulting for clients.</li>
-      <li><strong>Assistant Tutor, CS124</strong><br>Jan 2025 – Present<br>Tutoring 200+ students and leading project-based learning.</li>
-    </ul>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-card">
-      <h3>NETR – Smart Glasses</h3>
-      <p>Raspberry Pi + YOLOv5 system with 90% object detection accuracy, and 500+ downloads on Android.</p>
-      <a href="https://github.com/Raaghav-Pillai" target="_blank">GitHub</a>
+  <section id="work" class="work-section">
+    <h2>Selected Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>NETR Smart Glasses</h3>
+        <p>Object detection glasses with Raspberry Pi + YOLOv5. Enabled 90% accuracy for visually impaired users.</p>
+        <a href="https://github.com/Raaghav-Pillai" target="_blank">View Code →</a>
+      </div>
+      <div class="project-card">
+        <h3>GPT Research Platform</h3>
+        <p>Custom GPTs and prompt design for internal consulting research initiatives. Powered by data insights.</p>
+      </div>
     </div>
   </section>
 
-  <section id="publications">
-    <h2>Publications</h2>
-    <ul>
-      <li><strong>Beyond Fact-Checking</strong> (2025–): Misinformation analysis during hurricanes with PhD collaborators.</li>
-      <li><strong>AI & the Job Market</strong> (2023): Surveyed 150+ participants on perceptions of AI’s career impact.</li>
-    </ul>
+  <section id="about" class="about-section">
+    <h2>About Me</h2>
+    <p>I’m a CS + Education undergrad at UIUC. I build with purpose: smart glasses for the visually impaired, AI tools for real-world consulting, and research on misinformation and AI’s impact on jobs.</p>
   </section>
 
-  <section id="contact">
-    <h2>Contact
+  <section id="contact" class="contact-section">
+    <h2>Let’s Connect</h2>
+    <p>Email: <a href="mailto:raaghavpillai@gmail.com">raaghavpillai@gmail.com</a></p>
+    <p><a href="https://linkedin.com/in/raaghavpillai" target="_blank">LinkedIn</a> · <a href="https://github.com/Raaghav-Pillai" target="_blank">GitHub</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Raaghav Pillai.</p>
+  </footer>
+</body>
+</html>
