@@ -1,13 +1,15 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     scroll-behavior: smooth;
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
   }
   
   body {
+    background: #f9f9f9;
+    color: #111;
     line-height: 1.6;
-    background: #f8f9fa;
   }
   
   header {
@@ -17,6 +19,7 @@
     top: 0;
     width: 100%;
     z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
   
   nav ul {
@@ -33,9 +36,31 @@
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    color: #ffcc00;
   }
   
   section {
-    padding: 100px 20px;
-    margin-top: 50px;
+    max-width: 800px;
+    margin: auto;
+    padding: 120px 20px 80px 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.7s ease;
+  }
+  
+  section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  h1, h2 {
+    margin-bottom: 10px;
+  }
+  
+  ul li {
+    margin-bottom: 20px;
   }  
