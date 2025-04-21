@@ -1,30 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Raaghav Pillai | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
   <script defer src="script.js"></script>
 </head>
 <body>
+
+  <!-- ✅ Fixed Navbar -->
+  <nav class="navbar">
+    <div class="logo">Raaghav</div>
+    <ul class="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ✅ Hero Section -->
   <header class="hero">
-    <nav class="navbar">
-      <div class="logo">Raaghav</div>
-      <ul class="nav-links">
-        <li><a href="#work">Work</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
     <div class="hero-content">
       <h1>Hi, I’m Raaghav.</h1>
       <p>Creative Technologist | Educator | Builder</p>
       <a href="#work" class="cta">See My Work</a>
+
+      <div class="social-links">
+        <a href="mailto:raaghavpillai@gmail.com" target="_blank">
+          <img src="assets/mail.svg" alt="Email" />
+        </a>
+        <a href="https://linkedin.com/in/raaghavpillai" target="_blank">
+          <img src="assets/linkedin.svg" alt="LinkedIn" />
+        </a>
+        <a href="https://github.com/Raaghav-Pillai" target="_blank">
+          <img src="assets/github.svg" alt="GitHub" />
+        </a>
+      </div>      
     </div>
   </header>
 
+  <!-- ✅ Work Section -->
   <section id="work" class="work-section">
     <h2>Selected Projects</h2>
     <div class="projects-grid">
@@ -40,19 +57,23 @@
     </div>
   </section>
 
+  <!-- ✅ About Section -->
   <section id="about" class="about-section">
     <h2>About Me</h2>
     <p>I’m a CS + Education undergrad at UIUC. I build with purpose: smart glasses for the visually impaired, AI tools for real-world consulting, and research on misinformation and AI’s impact on jobs.</p>
   </section>
 
+  <!-- ✅ Contact Section -->
   <section id="contact" class="contact-section">
     <h2>Let’s Connect</h2>
     <p>Email: <a href="mailto:raaghavpillai@gmail.com">raaghavpillai@gmail.com</a></p>
     <p><a href="https://linkedin.com/in/raaghavpillai" target="_blank">LinkedIn</a> · <a href="https://github.com/Raaghav-Pillai" target="_blank">GitHub</a></p>
   </section>
 
+  <!-- ✅ Footer -->
   <footer>
     <p>© 2025 Raaghav Pillai.</p>
   </footer>
+
 </body>
 </html>
