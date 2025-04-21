@@ -104,3 +104,34 @@ window.addEventListener("resize", () => {
   canvas.width = width;
   canvas.height = height;
 });
+
+const hiText = document.getElementById("hi-text");
+const greetings = ["Hello", "Namaste","Hola", "Bonjour", "Ciao", "Olá"];
+let greetIndex = 0;
+let charIndex = 0;
+let deleting = false;
+
+function typeGreeting() {
+  const current = greetings[greetIndex];
+
+  if (!deleting) {
+    hiText.textContent = current.substring(0, charIndex + 1);
+    charIndex++;
+    if (charIndex === current.length) {
+      deleting = true;
+      setTimeout(typeGreeting, 5000); // wait before backspacing
+      return;
+    }
+  } else {
+    hiText.textContent = current.substring(0, charIndex - 1);
+    charIndex--;
+    if (charIndex === 0) {
+      deleting = false;
+      greetIndex = (greetIndex + 1) % greetings.length;
+    }
+  }
+
+  setTimeout(typeGreeting, deleting ? 40 : 100);
+}
+
+typeGreeting();

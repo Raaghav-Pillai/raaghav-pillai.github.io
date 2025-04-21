@@ -126,7 +126,6 @@ body {
   font-weight: bold;
   text-decoration: none;
   transition: background 0.3s ease;
-  margin: 0.5rem;
 }
 
 .cta:hover {
@@ -249,16 +248,20 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 3rem;
-  flex-direction: column;
-  position: relative;
-  z-index: 1;
   padding-top: 6rem;
 }
 
-.hero-photo.circle-style img {
+.hero-photo.circle-style {
+  flex-shrink: 0;
   width: 320px;
   height: 320px;
+}
+
+.hero-photo.circle-style img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 50%;
   border: 4px solid var(--accent);
@@ -271,10 +274,9 @@ footer {
 }
 
 .hero-text {
-  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start; 
 }
 
 @media (min-width: 768px) {
@@ -284,7 +286,7 @@ footer {
 
   .hero-text {
     text-align: left;
-    align-items: flex-start;
+    align-items: left;
   }
 }
 
@@ -297,4 +299,36 @@ footer {
   width: 100%;
   height: 100%;
   pointer-events: none;
+}
+
+
+/* changing hi text */
+#hi-text {
+  color: var(--accent);
+  display: inline-block;
+}
+
+#hi-text::after {
+  content: "|";
+  animation: blink 1s step-end infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.greeting-line {
+  min-height: 3.5rem;
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.greeting-line h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  transition: all 0.3s ease-in-out;
 }
