@@ -173,3 +173,37 @@ footer {
   filter: invert(55%) sepia(1) saturate(500%) hue-rotate(-10deg);
   opacity: 1;
 }
+
+/* Skills Section */
+#skills {
+  padding: 80px 20px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.skills-list li {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.skills-list li:hover {
+  background: #ff006e;
+  transform: scale(1.05);
+  color: #fff;
+}
