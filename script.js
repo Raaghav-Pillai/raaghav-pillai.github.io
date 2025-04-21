@@ -32,9 +32,17 @@ document.addEventListener("DOMContentLoaded", () => {
     currentTheme = nextTheme;
     updateIconsForTheme(nextTheme);
   });
+
+  const trailToggle = document.getElementById("trail-toggle");
+
+  trailToggle.addEventListener("click", () => {
+    trailEnabled = !trailEnabled;
+    trailToggle.textContent = trailEnabled ? "✨" : "🚫";
+  });
 });
 
 // Mouse Trail Canvas
+let trailEnabled = true;  
 const canvas = document.getElementById("trail-canvas");
 const ctx = canvas.getContext("2d");
 let width = window.innerWidth;
@@ -45,6 +53,7 @@ canvas.height = height;
 let trail = [];
 
 document.addEventListener("mousemove", (e) => {
+  if (!trailEnabled) return;
   trail.push({
     x: e.clientX,
     y: e.clientY,
