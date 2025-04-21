@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Raaghav Pillai | Portfolio</title>
-  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
   <script defer src="script.js"></script>
 </head>
 <body>
 
-  <!-- ✅ Fixed Navbar -->
   <nav class="navbar">
     <div class="logo">Raaghav</div>
     <ul class="nav-links">
       <li><a href="#work">Work</a></li>
       <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <button id="theme-toggle" aria-label="Toggle theme">🌓</button>
   </nav>
 
-  <!-- ✅ Hero Section -->
   <header class="hero">
     <div class="hero-content">
       <h1>Hi, I’m Raaghav.</h1>
@@ -29,23 +29,46 @@
 
       <div class="social-links">
         <a href="mailto:raaghavpillai@gmail.com" target="_blank">
-          <img src="assets/mail.svg" alt="Email" />
+          <img
+            class="theme-icon"
+            src="assets/mail-dark.svg"
+            data-dark="assets/mail-light.svg"
+            data-light="assets/mail-dark.svg"
+            alt="Email"
+          />
         </a>
         <a href="https://linkedin.com/in/raaghavpillai" target="_blank">
-          <img src="assets/linkedin.svg" alt="LinkedIn" />
+          <img
+            class="theme-icon"
+            src="assets/linkedin-dark.svg"
+            data-dark="assets/linkedin-light.svg"
+            data-light="assets/linkedin-dark.svg"
+            alt="LinkedIn"
+          />
         </a>
         <a href="https://github.com/Raaghav-Pillai" target="_blank">
-          <img src="assets/github.svg" alt="GitHub" />
+          <img
+            class="theme-icon"
+            src="assets/github-dark.svg"
+            data-dark="assets/github-light.svg"
+            data-light="assets/github-dark.svg"
+            alt="GitHub"
+          />
         </a>
-        <a href="assets/RaaghavPillai_Resume.pdf" target="_blank" title="Resume">
-          <img src="assets/resume.svg" alt="Resume" />
-        </a>        
-      </div>         
+        <a href="assets/RaaghavPillai_Resume.pdf" target="_blank">
+          <img
+            class="theme-icon"
+            src="assets/resume-dark.svg"
+            data-dark="assets/resume-light.svg"
+            data-light="assets/resume-dark.svg"
+            alt="Resume"
+          />
+        </a>
+      </div>      
     </div>
   </header>
 
-  <!-- ✅ Work Section -->
-  <section id="work" class="work-section">
+  <section id="work">
     <h2>Selected Projects</h2>
     <div class="projects-grid">
       <div class="project-card">
@@ -60,8 +83,7 @@
     </div>
   </section>
 
-  <!-- ✅ About Section -->
-  <section id="about" class="about-section">
+  <section id="about">
     <h2>About Me</h2>
     <p>I’m a CS + Education undergrad at UIUC. I build with purpose: smart glasses for the visually impaired, AI tools for real-world consulting, and research on misinformation and AI’s impact on jobs.</p>
   </section>
@@ -79,16 +101,14 @@
       <li>HTML/CSS</li>
       <li>Power BI</li>
     </ul>
-  </section>  
+  </section>
 
-  <!-- ✅ Contact Section -->
-  <section id="contact" class="contact-section">
+  <section id="contact">
     <h2>Let’s Connect</h2>
     <p>Email: <a href="mailto:raaghavpillai@gmail.com">raaghavpillai@gmail.com</a></p>
     <p><a href="https://linkedin.com/in/raaghavpillai" target="_blank">LinkedIn</a> · <a href="https://github.com/Raaghav-Pillai" target="_blank">GitHub</a></p>
   </section>
 
-  <!-- ✅ Footer -->
   <footer>
     <p>© 2025 Raaghav Pillai.</p>
   </footer>
