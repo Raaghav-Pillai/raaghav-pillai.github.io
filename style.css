@@ -83,14 +83,12 @@ body {
 
 /* Hero */
 .hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
-  padding-top: 120px;
-  text-align: center;
-  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
 }
 
 .hero h1 {

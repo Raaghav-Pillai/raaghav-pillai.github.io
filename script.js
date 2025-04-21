@@ -55,8 +55,15 @@ document.addEventListener("mousemove", (e) => {
   });
 });
 
+const getFillStyle = () => {
+  const theme = document.documentElement.getAttribute("data-theme") || "dark";
+  return theme === "dark"
+    ? "rgba(0, 0, 0, 0.08)"
+    : "rgba(255, 255, 255, 0.06)";
+};
+
 function animate() {
-  ctx.fillStyle = "rgba(0, 0, 0, 0.08)";
+  ctx.fillStyle = getFillStyle();
   ctx.fillRect(0, 0, width, height);
 
   for (let i = trail.length - 1; i >= 0; i--) {
@@ -73,7 +80,7 @@ function animate() {
 
     ctx.beginPath();
     ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(165, 0, 255, ${p.alpha})`; // Purple
+    ctx.fillStyle = `rgba(165, 0, 255, ${p.alpha})`;
     ctx.fill();
   }
 
