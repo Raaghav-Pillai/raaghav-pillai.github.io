@@ -82,11 +82,6 @@ const Footer = () => {
             </a>
           </div>
         </div>
-
-        <div className="mt-8 text-center text-xs text-gray-500">
-          <p>Built with React and Tailwind CSS</p>
-          <p className="mt-1 font-mono">{'<code /> with ❤️'}</p>
-        </div>
       </div>
     </footer>
   );
