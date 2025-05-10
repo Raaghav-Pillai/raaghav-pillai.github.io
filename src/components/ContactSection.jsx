@@ -17,6 +17,44 @@ const ContactSection = () => {
     }));
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
+    const formUrl = "https://formspree.io/f/your_form_id"; // replace with real ID
+  
+    try {
+      const response = await fetch(formUrl, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      if (response.ok) {
+        setFormStatus({
+          type: 'success',
+          message: "Thanks for your message! I'll get back to you soon.",
+        });
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        const data = await response.json();
+        setFormStatus({
+          type: 'error',
+          message: data.errors?.[0]?.message || "Something went wrong.",
+        });
+      }
+    } catch (error) {
+      setFormStatus({
+        type: 'error',
+        message: "Network error. Please try again later.",
+      });
+    }
+  
+    setTimeout(() => setFormStatus(null), 5000);
+  };  
+
   return (
     <section id="contact" className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-6">
@@ -107,7 +145,7 @@ const ContactSection = () => {
                 Send Me a Message
               </h3>
               
-              <form action="https://formspree.io/f/xblokprd" method="POST"className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     Name *
