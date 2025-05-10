@@ -1,120 +1,15 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<!doctype html>
+<html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Raaghav Pillai | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
-  <script defer src="script.js"></script>
+  <title>Developer Portfolio</title>
 </head>
+
 <body>
-
-  <nav class="navbar">
-    <div class="logo">Raaghav</div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-    </ul>
-    <div class="nav-buttons">
-      <button id="theme-toggle" aria-label="Toggle theme">🌓</button>
-      <button id="trail-toggle" aria-label="Toggle trail">✨</button>
-    </div>    
-  </nav>
-
-  <canvas id="trail-canvas"></canvas>
-
-<header class="hero">
-  <div class="hero-content row-layout">
-    <div class="hero-photo circle-style">
-      <img src="assets/RaaghavPillai_headshot.jpg" alt="Raaghav Pillai" />
-    </div>
-    <div class="hero-text">
-      <div class="greeting-line">
-        <h1><span id="hi-text">Hi</span>, I’m Raaghav.</h1>
-      </div>
-      <p>Creative Technologist | Educator | Builder</p>
-      <a href="#projects" class="cta">See My Work</a>
-      <div class="social-links">
-        <a href="mailto:raaghavpillai@gmail.com" target="_blank">
-          <img class="theme-icon" src="assets/mail-dark.svg" data-dark="assets/mail-light.svg" data-light="assets/mail-dark.svg" alt="Email" />
-        </a>
-        <a href="https://linkedin.com/in/raaghavpillai" target="_blank">
-          <img class="theme-icon" src="assets/linkedin-dark.svg" data-dark="assets/linkedin-light.svg" data-light="assets/linkedin-dark.svg" alt="LinkedIn" />
-        </a>
-        <a href="https://github.com/Raaghav-Pillai" target="_blank">
-          <img class="theme-icon" src="assets/github-dark.svg" data-dark="assets/github-light.svg" data-light="assets/github-dark.svg" alt="GitHub" />
-        </a>
-        <a href="assets/RaaghavPillai_Resume.pdf" target="_blank">
-          <img class="theme-icon" src="assets/resume-dark.svg" data-dark="assets/resume-light.svg" data-light="assets/resume-dark.svg" alt="Resume" />
-        </a>
-      </div>
-    </div>
-  </div>
-</header>
-
-<section id="about">
-  <h2>About Me</h2>
-  <p>I’m a CS + Education undergrad at UIUC driven by impact. At OTCR Consulting, I’ve led internal project teams and helped clients rethink strategy and user experience. I’ve built NETR Smart Glasses — accessible AI tech for the visually impaired — and explored misinformation, job automation, and ethical AI through research. I thrive at the intersection of code, people, and purpose.</p>
-</section>
-
-<section id="experience">
-  <h2>Experience</h2>
-  <div class="projects-grid">
-    <div class="project-card">
-      <h3>OTCR Consulting</h3>
-      <p><strong>Lead Consultant & Internal PM</strong><br>Led a 7-member team for a GPU benchmarking startup, coordinated with clients, and drove strategic deliverables across research, outreach, and design.</p>
-    </div>
-    <div class="project-card">
-      <h3>CS 124 - UIUC</h3>
-      <p><strong>Assistant Tutor</strong><br>Helped 400+ freshmen master C++ fundamentals through 1:1 support and debugging guidance.</p>
-    </div>
-  </div>
-</section>
-  <section id="projects">
-    <h2>Selected Projects</h2>  
-    <div class="projects-grid">
-      <div class="project-card">
-        <h3>AI & Misinformation Research</h3>
-        <p>Explored how AI-generated content affects information trust, with a focus on TikTok and job automation narratives. Delivered actionable insights through literature reviews and narrative analysis.</p>
-      </div>  
-      <div class="project-card">
-        <h3>NETR Smart Glasses</h3>
-        <p>Object detection glasses with Raspberry Pi + YOLOv5. Enabled 90% accuracy for visually impaired users.</p>
-        <a href="https://github.com/Raaghav-Pillai" target="_blank">View Code →</a>
-      </div>
-      <div class="project-card">
-        <h3>GPT Research Platform</h3>
-        <p>Custom GPTs and prompt design for internal consulting research initiatives. Powered by data insights.</p>
-      </div>
-    </div>
-  </section>
-
-
-  <section id="skills">
-    <h2>Skills & Tools</h2>
-    <ul class="skills-list">
-      <li>Python</li>
-      <li>C++</li>
-      <li>JavaScript</li>
-      <li>Flask</li>
-      <li>MongoDB</li>
-      <li>YOLOv5</li>
-      <li>Git & GitHub</li>
-      <li>HTML/CSS</li>
-      <li>Power BI</li>
-      <li>Consulting & Strategy</li>
-<li>Figma</li>
-<li>UI/UX Design</li>
-<li>Research Writing</li>
-    </ul>
-  </section>
-
-  <footer>
-    <p>© 2025 Raaghav Pillai.</p>
-  </footer>
-
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
 </body>
+
 </html>
