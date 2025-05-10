@@ -83,7 +83,7 @@ const AboutSection = () => {
               </div>
               <div className="bg-gray-200 dark:bg-gray-800 rounded overflow-hidden mt-5">
                 <img 
-                  src="/public/assets/images/developer.jpg"
+                  src="/assets/images/developer.jpg"
                   alt="Developer"
                   className="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity duration-300"
                 />
