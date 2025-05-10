@@ -22,9 +22,6 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Remove dist directory
-      run: Remove-Item -Recurse -Force .\dist
-
     - name: Build project
       run: npm run build
 
