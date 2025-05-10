@@ -20,7 +20,7 @@ const ContactSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
   
-    const formUrl = "https://formspree.io/f/your_form_id"; // replace with real ID
+    const formUrl = "https://formspree.io/f/xblokprd";
   
     try {
       const response = await fetch(formUrl, {
