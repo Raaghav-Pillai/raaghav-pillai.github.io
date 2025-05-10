@@ -17,39 +17,6 @@ const ContactSection = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    
-    // Validate form
-    if (!formData.name || !formData.email || !formData.message) {
-      setFormStatus({
-        type: 'error',
-        message: 'Please fill in all required fields.',
-      });
-      return;
-    }
-
-    // Normally would send data to server here
-    // For demo purposes, just show success message
-    setFormStatus({
-      type: 'success',
-      message: 'Thanks for your message! I\'ll get back to you soon.',
-    });
-
-    // Reset form after submission
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
-    });
-
-    // Clear status after 5 seconds
-    setTimeout(() => {
-      setFormStatus(null);
-    }, 5000);
-  };
-
   return (
     <section id="contact" className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-6">
@@ -140,7 +107,7 @@ const ContactSection = () => {
                 Send Me a Message
               </h3>
               
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form action="https://formspree.io/f/xblokprd" method="POST"className="space-y-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     Name *
