@@ -1,7 +1,8 @@
 import React, { useState, useRef } from 'react';
+import ProjectModal from './ProjectModal';
 
 const ProjectsSection = () => {
-  const [activeProject, setActiveProject] = useState(null);
+  const [modalData, setModalData] = useState(null);
   const projectsRef = useRef(null);
 
   const projects = [
@@ -45,10 +46,30 @@ const ProjectsSection = () => {
       image: '/assets/images/project-ai.jpg',
       link: '#'
     },
+    {
+      id: 'ai-therapist',
+      title: 'AI Therapist App',
+      period: 'Coming Soon',
+      description: 'An innovative application that provides AI-driven therapeutic support.',
+      details: [
+        'Placeholder detail 1: Core feature of the app.',
+        'Placeholder detail 2: Technology used for the backend.',
+        'Placeholder detail 3: Unique selling proposition.'
+      ],
+      technologies: ['React Native', 'Node.js', 'Google Cloud AI', 'MongoDB'],
+      image: '/assets/images/project-ai-therapist.jpg',
+      link: '#'
+    },
   ];
 
-  const handleProjectClick = (projectId) => {
-    setActiveProject(activeProject === projectId ? null : projectId);
+  const handleProjectClick = (project, event) => {
+    const card = event.currentTarget.closest('.project-card');
+    const rect = card.getBoundingClientRect();
+    setModalData({ project, rect });
+  };
+
+  const handleCloseModal = () => {
+    setModalData(null);
   };
 
   return (
@@ -70,19 +91,19 @@ const ProjectsSection = () => {
           {projects.map((project) => (
             <div 
               key={project.id}
-              className="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl border border-gray-100 dark:border-gray-700"
+              className="project-card bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl border border-gray-100 dark:border-gray-700 flex flex-col"
             >
               <div className="h-48 bg-gray-300 dark:bg-gray-700 flex items-center justify-center">
                 <div className="text-5xl text-green-500">{`{ ${project.title.charAt(0)} }`}</div>
               </div>
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-grow">
                 <div className="font-mono text-xs text-green-500 mb-2">
                   {project.period}
                 </div>
                 <h3 className="font-bold text-xl mb-2 text-gray-800 dark:text-white">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                <p className="text-gray-600 dark:text-gray-400 mb-4 flex-grow">
                   {project.description}
                 </p>
                 <div className="mb-4 flex flex-wrap gap-2">
@@ -96,30 +117,20 @@ const ProjectsSection = () => {
                   ))}
                 </div>
                 <button
-                  onClick={() => handleProjectClick(project.id)}
-                  className="text-green-500 hover:text-green-700 dark:hover:text-green-300 text-sm flex items-center gap-1 transition-colors font-medium"
+                  onClick={(e) => handleProjectClick(project, e)}
+                  className="mt-auto text-green-500 hover:text-green-700 dark:hover:text-green-300 text-sm flex items-center gap-1 transition-colors font-medium"
                 >
-                  {activeProject === project.id ? 'View Less' : 'View More'} 
-                  <svg xmlns="http://www.w3.org/2000/svg" className={`h-4 w-4 transition-transform ${activeProject === project.id ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  View More 
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
                 </button>
-                
-                {activeProject === project.id && (
-                  <div className="mt-4 pt-4 border-t border-gray-100 dark:border-gray-700">
-                    <h4 className="font-medium mb-2 text-gray-800 dark:text-white">Details:</h4>
-                    <ul className="list-disc list-inside text-sm text-gray-600 dark:text-gray-400 space-y-1">
-                      {project.details.map((detail, index) => (
-                        <li key={index}>{detail}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
               </div>
             </div>
           ))}
         </div>
       </div>
+      <ProjectModal modalData={modalData} onClose={handleCloseModal} />
     </section>
   );
 };
