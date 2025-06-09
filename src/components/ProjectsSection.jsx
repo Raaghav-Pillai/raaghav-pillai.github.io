@@ -44,7 +44,7 @@ const ProjectsSection = () => {
       ],
       technologies: ['Survey Design', 'Data Analysis', 'Research Methodology'],
       image: '/assets/images/project-ai.jpg',
-      link: '#'
+      link: 'https://research-archive.org/index.php/rars/preprint/view/337'
     },
     {
       id: 'ai-therapist',
@@ -58,7 +58,7 @@ const ProjectsSection = () => {
       ],
       technologies: ['React Native', 'Node.js', 'Google Cloud AI', 'MongoDB'],
       image: '/assets/images/project-ai-therapist.jpg',
-      link: '#'
+      link: 'https://ai-therapist-foc0.onrender.com'
     },
   ];
 
