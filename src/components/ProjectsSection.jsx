@@ -17,7 +17,7 @@ const ProjectsSection = () => {
       ],
       technologies: ['JavaScript', 'Python', 'C', 'YOLOv5', 'TensorFlow Lite', 'Android Studio'],
       image: '/assets/images/project-netr.jpg',
-      link: '#'
+      link: 'https://github.com/raaghav-pillai'
     },
     {
       id: 'misinformation',
@@ -30,7 +30,7 @@ const ProjectsSection = () => {
       ],
       technologies: ['Data Analysis', 'Social Media Mining', 'Classification Algorithms'],
       image: '/assets/images/project-misinformation.jpg',
-      link: '#'
+      link: 'https://github.com/raaghav-pillai'
     },
     {
       id: 'ai-perception',
