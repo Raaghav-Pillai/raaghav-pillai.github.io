@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 const HeroSection = () => {
   const [text, setText] = useState('');
-  const fullText = "I build things for the web.";
+  const fullText = "Innovator, Leader & Strategist";
   const typingSpeed = 100;
   
   useEffect(() => {
@@ -73,7 +73,7 @@ function Portfolio() {
             <span className="text-green-500">{'/>'}</span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-xl">
-            I'm a Computer Science student at the University of Illinois at Urbana Champaign.
+            I'm a Computer Science and Statistics student at the University of Illinois at Urbana Champaign.
             I'm passionate about developing innovative tech solutions, from AI projects to
             smart devices for the visually impaired. Currently, I'm focused on research and
             technical consulting projects.
