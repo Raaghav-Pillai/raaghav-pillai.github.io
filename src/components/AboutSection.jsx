@@ -52,7 +52,7 @@ const AboutSection = () => {
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-xl">
               Hello! I'm Raaghav, a Computer Science student at the University of Illinois at Urbana Champaign 
               with a passion for innovative technology and problem-solving. I'm set to graduate in May 2027 with 
-              a strong academic foundation (GPA: 3.73/4.0).
+              a strong academic foundation (GPA: 3.82/4.0).
             </p>
             <p className="text-lg leading-relaxed text-gray-600 dark:text-gray-300">
               My academic journey includes coursework in Computer Science, Calculus, Statistics, and Linear Algebra. 
