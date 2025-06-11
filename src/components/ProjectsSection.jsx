@@ -49,14 +49,15 @@ const ProjectsSection = () => {
     {
       id: 'ai-therapist',
       title: 'AI Therapist App',
-      period: 'Coming Soon',
-      description: 'An innovative application that provides AI-driven therapeutic support.',
+      period: 'In Development',
+      description: 'A multi-modal AI therapist leveraging advanced deep learning to offer empathetic and personalized mental health support. Interact via text or voice, with future capabilities for immersive VR sessions.',
       details: [
-        'Placeholder detail 1: Core feature of the app.',
-        'Placeholder detail 2: Technology used for the backend.',
-        'Placeholder detail 3: Unique selling proposition.'
+        'Features real-time, text-to-text therapeutic conversations powered by a fine-tuned Llama model.',
+        'Integrates voice-to-voice interaction with emotion classification for more nuanced and responsive support.',
+        'Currently developing a VR version to create a more immersive and effective therapeutic experience.',
+        'Built on a foundation of a Text Transformer for emotion classification and a robust transcript database for generating context-aware responses.'
       ],
-      technologies: ['React Native', 'Node.js', 'Google Cloud AI', 'MongoDB'],
+      technologies: ['React Native', 'Node.js', 'Llama', 'TensorFlow', 'Google Cloud AI', 'VR Dev'],
       image: '/assets/images/project-ai-therapist.jpg',
       link: 'https://ai-therapist-foc0.onrender.com'
     },

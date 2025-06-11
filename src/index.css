@@ -23,3 +23,18 @@
 ::-webkit-scrollbar-corner {
   display: none;
 }
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.timeline-item-animate {
+  animation: slide-in 0.5s ease-out forwards;
+}
