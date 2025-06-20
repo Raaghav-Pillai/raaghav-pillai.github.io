@@ -45,7 +45,7 @@ const ExperienceItem = ({ date, title, company, details }) => {
 const ExperienceSection = () => {
   const experiences = [
     {
-      date: 'June 2025 – Present',
+      date: 'July 2025 – Present',
       title: 'Fullstack Developer',
       company: 'FlowDeca',
       details: [
